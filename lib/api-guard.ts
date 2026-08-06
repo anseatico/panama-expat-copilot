@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabase";
+import { supabaseAdmin, createClientSupabase } from "@/lib/supabase";
 import type { DocInput } from "@/lib/ai-engine";
 import type { User } from "@supabase/supabase-js";
 
