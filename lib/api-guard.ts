@@ -7,7 +7,7 @@ import type { User } from "@supabase/supabase-js";
 export async function requireUserWithCredit(): Promise<
   { user: User } | { error: NextResponse }
 > {
-  const supabase = supabaseServer();
+  const supabase = createClientSupabase();
   const {
     data: { user },
   } = await supabase.auth.getUser();
