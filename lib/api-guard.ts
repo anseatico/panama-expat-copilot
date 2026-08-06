@@ -14,7 +14,7 @@ export async function requireUserWithCredit(): Promise<
   if (!user) {
     return { error: NextResponse.json({ error: "No autenticado" }, { status: 401 }) };
   }
-  const admin = supabaseAdmin();
+  const admin = supabaseAdmin;
   const { data: ok } = await admin.rpc("consume_credit", { p_user_id: user.id });
   if (!ok) {
     return {
