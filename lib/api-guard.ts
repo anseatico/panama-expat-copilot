@@ -54,7 +54,7 @@ export async function saveAnalysis(
   module: "housing" | "receipts" | "health" | "insurance",
   result: unknown
 ) {
-  const admin = supabaseAdmin();
+  const admin = supabaseAdmin;
   await admin.from("analyses").insert({
     user_id: userId,
     module,
